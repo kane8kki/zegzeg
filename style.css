@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: Consolas, monaco, monospace;
+    margin: 0;
+    height: 100vh;
+}
+
+#console {
+    width: 100%;
+    padding: 20px;
+}
+
+#output {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+#prompt {
+    margin-right: 10px;
+}
+
+#input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    color: green;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+}
+
+#input::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Adjust thickness */
+    background-color: green;
+    animation: blink 1s step-start infinite;
+}
+
+#input::selection {
+    background: rgba(0, 255, 0, 0.3);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
